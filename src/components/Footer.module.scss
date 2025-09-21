@@ -1,0 +1,140 @@
+.footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  margin-top: auto;
+
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .seccionLogo {
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .descripcion {
+        color: #ccc;
+        line-height: 1.6;
+        margin: 0;
+      }
+    }
+
+    .seccionEnlaces,
+    .seccionContacto,
+    .seccionRedesSociales {
+      h4 {
+        color: #f0c14b;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    .seccionEnlaces {
+      .enlaces {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        a {
+          color: #ccc;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #f0c14b;
+          }
+        }
+      }
+    }
+
+    .seccionContacto {
+      .infoContacto {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        p {
+          color: #ccc;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+
+    .seccionRedesSociales {
+      .redesSociales {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background: rgba(240, 193, 75, 0.1);
+          border-radius: 50%;
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #f0c14b;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid #444;
+    padding: 1.5rem 0;
+    text-align: center;
+
+    .contenedor {
+      padding: 0 2rem;
+      display: block;
+
+      p {
+        margin: 0;
+        color: #999;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .contenedor {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      gap: 1.5rem;
+
+      .seccionRedesSociales {
+        .redesSociales {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
